@@ -21,6 +21,10 @@ public class PlayerCharacter : MonoBehaviour
 	public Animator anim;
 	public SpriteRenderer sprite;
 	public float walkingTreshold = 0.04f;
+	public float jumpingTreshold = 0.04f;
+	
+	public PhysicsMaterial2D mat;
+	float slowXwhenReleased = 0.8f;
 
 
 	void Start()
@@ -48,8 +52,10 @@ public class PlayerCharacter : MonoBehaviour
         Debug.Log("hor"+hor+", m_Grounded"+m_Grounded+"col"+colliders.Length+" jump t "+jumpTimeCounter);
 
 
+//rb.sharedMaterial=null;
 		if(rb.velocity.y<0){
         rb.velocity+=Vector2.up*Physics.gravity.y*(fallSpeed-1)*Time.deltaTime;
+//rb.sharedMaterial=mat;
 		}
 
 		bool jumpThisFramePressed=Input.GetButton("Jump");
@@ -65,10 +71,13 @@ public class PlayerCharacter : MonoBehaviour
 if(isJumpReleased){
 jumpTimeCounter=0;
 }
+
 		if((rb.velocity.y>=0 && jumpThisFramePressed && jumpTimeCounter>0) || (jumpPress && m_Grounded)){
 		jumpTimeCounter -= Time.deltaTime;
 		//Debug.Log("jump");
         rb.velocity+=Vector2.up*Physics.gravity.y*(lowJumpSpeed-1)*Time.deltaTime;
+
+		
 		}
 		
 		
@@ -76,11 +85,17 @@ jumpTimeCounter=0;
 		var curMove=Mathf.Abs(rb.velocity.x);
 		//if(<moveIf){
 		
+		if(Mathf.Abs(hor) >= 0.01f){
 		rb.velocity += Vector2.right*(moveSpeed-curMove)*hor;
-		//}
-		sprite.flipX = hor<0;
+	}else{
+	rb.velocity = new Vector2(rb.velocity.x*slowXwhenReleased, rb.velocity.y);
+	}
+
 		anim.SetBool("walking", Math.Abs(rb.velocity.x) > walkingTreshold);
-		sprite.flipX = hor>0; // transform.localScale = Vector3.forward * 
+		anim.SetBool("jumping", Math.Abs(rb.velocity.y) > jumpingTreshold);
+		
+		sprite.flipX = hor>=0;
+		// transform.localScale = Vector3.forward * 
 		//sprite.transform.localScale = new Vector3(hor<0?-1:1, 0, 0);
 		
 		
