@@ -874,8 +874,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 235.8, y: 23.600006}
-  m_SizeDelta: {x: 160, y: 53.84}
+  m_AnchoredPosition: {x: 235.8, y: 81.1}
+  m_SizeDelta: {x: 160, y: 161.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &218020886
 MonoBehaviour:
@@ -919,18 +919,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 218020887}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 398794966}
-        m_MethodName: OnRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: OnRight
-          m_BoolArgument: 0
-        m_CallState: 1
+      m_Calls: []
 --- !u!114 &218020887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -987,6 +976,21 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 398794966}
           m_MethodName: OnRightUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 398794966}
+          m_MethodName: OnRight
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2165,8 +2169,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -77.399994, y: 23.600006}
-  m_SizeDelta: {x: 160, y: 53.84}
+  m_AnchoredPosition: {x: -77.399994, y: 81.1}
+  m_SizeDelta: {x: 160, y: 161.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &742573556
 MonoBehaviour:
@@ -2210,18 +2214,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 742573557}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 398794966}
-        m_MethodName: OnJump
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: OnJump
-          m_BoolArgument: 0
-        m_CallState: 1
+      m_Calls: []
 --- !u!114 &742573557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2278,6 +2271,21 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 398794966}
           m_MethodName: OnJumpUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 398794966}
+          m_MethodName: OnJump
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3100,18 +3108,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 22
+    m_FontSize: 91
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 5
-    m_MaxSize: 104
+    m_MaxSize: 207
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: L
+  m_Text: <
 --- !u!222 &1056096283
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3178,18 +3186,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 22
+    m_FontSize: 128
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 5
-    m_MaxSize: 104
+    m_MaxSize: 253
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: J
+  m_Text: ^
 --- !u!222 &1121885663
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4699,8 +4707,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 78.3, y: 23.600006}
-  m_SizeDelta: {x: 160, y: 53.84}
+  m_AnchoredPosition: {x: 78.3, y: 81.1}
+  m_SizeDelta: {x: 160, y: 161.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1790178710
 MonoBehaviour:
@@ -4744,18 +4752,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1790178711}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 398794966}
-        m_MethodName: OnLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: OnLeft
-          m_BoolArgument: 0
-        m_CallState: 1
+      m_Calls: []
 --- !u!114 &1790178711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4812,6 +4809,21 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 398794966}
           m_MethodName: OnLeftUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 398794966}
+          m_MethodName: OnLeft
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5091,7 +5103,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 22
+    m_FontSize: 91
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 5
@@ -5102,7 +5114,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: R
+  m_Text: '>'
 --- !u!222 &1864534913
 CanvasRenderer:
   m_ObjectHideFlags: 0
