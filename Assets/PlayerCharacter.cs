@@ -48,8 +48,8 @@ public class PlayerCharacter : MonoBehaviour
 				}
 			}
 
-		var hor=Input.GetAxis("Horizontal");
-        Debug.Log("hor"+hor+", m_Grounded"+m_Grounded+"col"+colliders.Length+" jump t "+jumpTimeCounter);
+		var hor=Input2.GetAxis("Horizontal");
+        //Debug.Log("hor"+hor+", m_Grounded"+m_Grounded+"col"+colliders.Length+" jump t "+jumpTimeCounter);
 
 
 //rb.sharedMaterial=null;
@@ -58,7 +58,10 @@ public class PlayerCharacter : MonoBehaviour
 //rb.sharedMaterial=mat;
 		}
 
-		bool jumpThisFramePressed=Input.GetButton("Jump");
+		bool jumpThisFramePressed=Input2.GetButton("Jump");
+		//if(Input2.jump ==true && m_Grounded){
+		//	Input2.jump=false;
+		//}
 		isJumpReleased = jumpPress &&!jumpThisFramePressed;
 		 jumpPress=jumpThisFramePressed;
 
