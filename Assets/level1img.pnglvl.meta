@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: be7ab89db5152834aa4de2c4f2a7eda4
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {instanceID: 0}
+  m_Scale: 1
+  tileScale: 2
+  startY: 1
+  startX: 0
+  w: 128
+  h: 128
