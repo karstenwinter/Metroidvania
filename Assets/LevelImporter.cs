@@ -177,7 +177,9 @@ public class LvImporter : ScriptedImporter
 */
 					//MeshFilter f = cubeObj.AddComponent<MeshFilter>();
 					//f.mesh = cubeMesh;
-					if(!wat && !bg2){
+					if(!wat && !bg2
+					&& !isBreakable
+					){
 						var coll = cubeObj.AddComponent<BoxCollider2D>();
 						coll.edgeRadius = 0.1f;
 					}
