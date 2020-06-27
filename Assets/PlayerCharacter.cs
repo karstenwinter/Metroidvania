@@ -11,20 +11,21 @@ public class PlayerCharacter : MonoBehaviour
 	public float lowJumpSpeed=-2f;
 	public float moveSpeed=0.6f;
 	public float moveIf=0.5f;
+	public float GroundedRadius = 0.2f;
+	public float jumpTime = 2;
+	public float walkingTreshold = 0.04f;
+	public float jumpingTreshold = 0.04f;
+	public float slowXwhenReleased = 0.8f;
+	
 	bool isJumpReleased;
 	bool jumpPress;
 	public Transform GroundCheck;
-	public float GroundedRadius = 0.2f;
-	public float jumpTime = 2;
 	float jumpTimeCounter;
 
 	public Animator anim;
 	public SpriteRenderer sprite;
-	public float walkingTreshold = 0.04f;
-	public float jumpingTreshold = 0.04f;
 	
 	public PhysicsMaterial2D mat;
-	float slowXwhenReleased = 0.8f;
 
 
 	void Start()
@@ -95,9 +96,10 @@ jumpTimeCounter=0;
 	}
 
 		anim.SetBool("walking", Math.Abs(rb.velocity.x) > walkingTreshold);
-		anim.SetBool("jumping", Math.Abs(rb.velocity.y) > jumpingTreshold);
-		
+		anim.SetBool("jumping", !m_Grounded);
+		if(Mathf.Abs(hor) >= 0.01f){
 		sprite.flipX = hor>=0;
+	}
 		// transform.localScale = Vector3.forward * 
 		//sprite.transform.localScale = new Vector3(hor<0?-1:1, 0, 0);
 		
