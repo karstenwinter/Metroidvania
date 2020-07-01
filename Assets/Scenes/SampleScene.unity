@@ -790,12 +790,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66a19619d1f1e534bb62d4c36b6eb349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 2.89
-  lowJumpSpeed: -2.46
+  fallSpeed: 2.1
+  lowJumpSpeed: -2.1
   moveSpeed: 5
   moveIf: 2
   GroundedRadius: 0.2
-  jumpTime: 0.26
+  jumpTime: 0.314
   walkingTreshold: 0.31
   jumpingTreshold: 0.04
   slowXwhenReleased: 0.8
