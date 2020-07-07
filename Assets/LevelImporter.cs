@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEditor.Experimental.AssetImporters;
 using System.IO;
+using System.Text;
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine.UI;
@@ -111,6 +112,30 @@ public class LvImporter : ScriptedImporter
 		Color Camp = map.GetPixel(x++, -1);
 		Color BG2 = map.GetPixel(33, -1);
 
+Color[]arr = new []{
+
+		Start,
+		Bounds,
+		MetaBounds,
+		Block,
+		Breakable,
+		Background,
+		Treasure,
+		Enemy,
+		Boss,
+		NPC,
+		Seller,
+		Upgrade,
+		Water,
+		Spikes,
+		Lore,
+		Key,
+		Gate,
+		Camp,
+		BG2
+
+	};
+
 		Debug.Log(fm(Start) +",Start");
 		Debug.Log(fm(Bounds) +",Bounds");
 		Debug.Log(fm(MetaBounds) +",MetaBounds");
@@ -137,6 +162,8 @@ public class LvImporter : ScriptedImporter
 		};
 		//string fm="F5";
 		Debug.Log(Block+":"+fm(Block));
+		StringBuilder sb=new StringBuilder();
+		//String s="";
 		for(int y=h-2;y>=startY;y--){
 			for(x=startX;x<w;x++){
 				
@@ -183,9 +210,17 @@ public class LvImporter : ScriptedImporter
 						var coll = cubeObj.AddComponent<BoxCollider2D>();
 						coll.edgeRadius = 0.1f;
 					}
+
 				}
+				int ind=1+Array.IndexOf(arr, current);
+				sb.Append(ind+", ");
 			}
+		//Debug.Log(sb);
+	// sb=new StringBuilder();
+			sb.Append("\n");
 		}
+		//Debug.Log(sb);
+		System.IO.File.WriteAllText("1.txt",sb.ToString());
 
 
 		//DestroyImmediate(cubeObj.GetComponent<BoxCollider>());
