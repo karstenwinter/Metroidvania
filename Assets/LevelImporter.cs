@@ -165,11 +165,14 @@ Color[]arr = new []{
 		StringBuilder sb=new StringBuilder();
 		//String s="";
 		for(int y=h-2;y>=startY;y--){
+			 StringBuilder line=new StringBuilder();
+			 int countdown=4;
 			for(x=startX;x<w;x++){
 				
 				Color current = map.GetPixel(x, y-h);
 				Color above = map.GetPixel(x, y+1-h);
 				Color above2 = map.GetPixel(x, y+2-h);
+				int ind = 0;
 				if(//current.ToString() != Background.ToString()) { //
 					Array.Exists(blockFor, element => fm(element) == fm(current))) {
 					var wat=fm(current) == fm(Water);
@@ -188,7 +191,7 @@ Color[]arr = new []{
 					GameObject cubeObj = new GameObject("y"+y+"x"+x+ " "+tag);
 		//plane.transform.position = -120 * Vector3.one;
         //cubeObj.transform.rotation = Quaternion.Euler(90, 90, -90);
-					cubeObj.tag=tag;
+					//cubeObj.tag=tag;
 					cubeObj.transform.parent = gameObjectRoot.transform;
 					cubeObj.transform.position=new Vector3(x,y-h,0)*tileScale;
 					cubeObj.transform.localScale=Vector3.one*tileScale;
@@ -209,19 +212,33 @@ Color[]arr = new []{
 					){
 						var coll = cubeObj.AddComponent<BoxCollider2D>();
 						coll.edgeRadius = 0.1f;
+						ind = 14;
 					}
 
 				}
-				int ind=1+Array.IndexOf(arr, current);
-				sb.Append(ind+", ");
+				//int ind=1+Array.IndexOf(arr, current);
+				//sb.Append(ind+", ");
+				//if(countdown < 0){
+				line.Append(ind+","+ind+","+ind+",");
+				//}else{
+				//	countdown--;
+				//}
 			}
 		//Debug.Log(sb);
 	// sb=new StringBuilder();
-			sb.Append("\n");
+			string lineStr=line.ToString();
+			sb.Append(lineStr).Append("\n");
+			//sb.Append(lineStr.Substring(12)).Append("\n");
+			//sb.Append(lineStr.Substring(12)).Append("\n");
 		}
 		//Debug.Log(sb);
-		System.IO.File.WriteAllText("1.txt",sb.ToString());
-
+		string str=
+"<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>\n<map version=\"1.2\" orientation=\"orthogonal\" renderorder=\"right-down\" width=\"348\" height=\"348\" tilewidth=\"64\" tileheight=\"64\" nextobjectid=\"1\">\n  <tileset firstgid=\"1\" name=\"hollowtile128\" columns=\"12\" tilecount=\"108\" tileheight=\"64\" tilewidth=\"64\">\n    <image source=\"../Download/hollowtile128.png\" width=\"768\" height=\"576\" />\n  </tileset>\n  <layer name=\"Layer\" width=\"348\" height=\"348\">\n    <data encoding=\"csv\">"+
+		sb.ToString()
+		+sb.ToString()
++"</data>\n  </layer>\n</map>";
+		System.IO.File.WriteAllText("test.tmx",str);
+Debug.Log("chars: "+str.Length+"test.tmx");
 
 		//DestroyImmediate(cubeObj.GetComponent<BoxCollider>());
 		gameObjectRoot.transform.position = position;
