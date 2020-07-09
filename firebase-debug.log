@@ -1,0 +1,35 @@
+[debug] [2020-07-07T17:22:32.296Z] ----------------------------------------------------------------------
+[debug] [2020-07-07T17:22:32.299Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Karsten\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-07-07T17:22:32.299Z] CLI Version:   7.2.2
+[debug] [2020-07-07T17:22:32.299Z] Platform:      win32
+[debug] [2020-07-07T17:22:32.299Z] Node Version:  v10.16.2
+[debug] [2020-07-07T17:22:32.308Z] Time:          Tue Jul 07 2020 19:22:32 GMT+0200 (GMT+02:00)
+[debug] [2020-07-07T17:22:32.308Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2020-07-07T17:22:32.321Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-07T17:22:32.321Z] > authorizing via signed-in user
+[debug] [2020-07-07T17:22:32.321Z] [iam] checking project winter-vania for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-07-07T17:22:32.323Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-07-07T17:22:32.323Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-07-07T17:22:32.578Z] <<< HTTP RESPONSE 200
+[debug] [2020-07-07T17:22:32.584Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/winter-vania:testIamPermissions  
+
+[debug] [2020-07-07T17:22:33.393Z] <<< HTTP RESPONSE 200
+[debug] [2020-07-07T17:22:33.395Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/winter-vania  
+ 
+[debug] [2020-07-07T17:22:33.768Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'winter-vania'...
+[info] 
+[info] i  deploying hosting
+[debug] [2020-07-07T17:22:33.773Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/winter-vania/versions  
+
+[debug] [2020-07-07T17:22:35.205Z] <<< HTTP RESPONSE 200
+[info] i  hosting[winter-vania]: beginning deploy...
+[info] i  hosting[winter-vania]: found 17 files in Release-Web
+[debug] [2020-07-07T17:22:35.220Z] [hosting] hash cache [UmVsZWFzZS1XZWI] load error: lines is not defined
+[debug] [2020-07-07T17:22:35.618Z] [hosting] hash cache [UmVsZWFzZS1XZWI] stored for 17 files
+[debug] [2020-07-07T17:22:35.618Z] [hosting][hash queue][FINAL]
+[debug] [2020-07-07T17:22:35.618Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/winter-vania/versions/1e7314e0382fa75c:populateFiles  
+ <request body omitted>
